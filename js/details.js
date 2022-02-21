@@ -1,6 +1,6 @@
 
 async function season() {
-    const response = await fetch('https://apiorganica.azurewebsites.net/produto/tanaepoca')
+    const response = await fetch('https://apiorganica.azurewebsites.net/produtos/tanaepoca')
     const jsonBody = await response.json()
     let params = new URLSearchParams(window.location.search)
     let codProd = params.get('codProd')
@@ -15,7 +15,7 @@ async function season() {
 }
 
 async function fetchImg(id) {
-    const response = await fetch('https://apiorganica.azurewebsites.net/imagem/' + id)
+    const response = await fetch('https://apiorganica.azurewebsites.net/imagens/' + id)
     const jsonBody = await response.json()
     return jsonBody
 }

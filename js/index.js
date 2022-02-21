@@ -1,17 +1,17 @@
 
 
-    function indexMenu() {
+function indexMenu() {
     document.querySelector('.headerMenu').style.opacity = 0;
     document.querySelector('.menuModal').style.left = 0;
-    
-    
+
+
 }
 function indexMenuClose() {
     document.querySelector('.headerMenu').style.opacity = 1;
     document.querySelector('.menuModal').style.left = '-101vh';
 }
 
-const requisicao = fetch('https://apiorganica.azurewebsites.net/categoria').then(response => {
+const requisicao = fetch('https://apiorganica.azurewebsites.net/categorias').then(response => {
     return response.json()
 }).then(jsonBody => {
 
@@ -29,13 +29,13 @@ const requisicao = fetch('https://apiorganica.azurewebsites.net/categoria').then
 })
 
 async function fetchSeason() {
-    const response = await fetch('https://apiorganica.azurewebsites.net/produto/tanaepoca')
+    const response = await fetch('https://apiorganica.azurewebsites.net/produtos/tanaepoca')
     const jsonBody = await response.json()
     return jsonBody
 }
 
 async function fetchImg(id) {
-    const response = await fetch('https://apiorganica.azurewebsites.net/imagem/' + id)
+    const response = await fetch('https://apiorganica.azurewebsites.net/imagens/' + id)
     const jsonBody = await response.json()
     return jsonBody
 }
