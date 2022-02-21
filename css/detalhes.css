@@ -48,20 +48,38 @@ header{
     align-items: center;
 }
 
+.headerCart{
+    position: relative;
+}
+
+.basketQtd{
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color: #f00;
+    border-radius: 50%;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+
+
 
 main{
     width: 95%;
-    /* border: 1px solid black; */
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
 }
 .detalheImg{
     width: 100%;
-    /* border: 1px solid yellow; */
+    border-radius: 10px;
     overflow: hidden;
     margin-bottom: 5px;
+    object-fit: contain;
 }
 .detalheImg img{
     width: 100%;
@@ -117,4 +135,13 @@ main{
  width: 25%;
  text-align: center;
  font-size: 1.5rem;
+}
+
+.inativo{
+    display: none;
+    /* color: red; */
+}
+
+i{
+    cursor: pointer;
 }

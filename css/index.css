@@ -48,6 +48,19 @@ header{
     transition: all 1s ease-in-out;
 }
 
+.basketQtd{
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color: #f00;
+    border-radius: 50%;
+    font-size: 15px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    display: none;
+}
+
 a{
     text-decoration: none;
     color: #000;
@@ -113,7 +126,7 @@ a{
 }
 .cardEpoca{
     height: 160px;
-    width: 292px;
+    /* width: 292px; */
     overflow: hidden;
     margin-right: 20px;
     border-radius: 5px;

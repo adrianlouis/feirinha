@@ -15,7 +15,7 @@
     <header>
 
         <div class="headerMenu">
-            <i class="fa-light fa-bars"></i>
+            <i class="fa-light fa-bars" onclick="removeLocalStorage()"></i>
         </div>
 
         <div class="headerIcons">
@@ -24,6 +24,10 @@
             </div>
             <div class="headerCart">
                 <i class="fa-light fa-basket-shopping"></i>
+
+                <div class="basketQtd">
+                    
+                </div>
             </div>
         </div>
 
@@ -36,28 +40,26 @@
         </div>
 
         <span class="detNomeProd">
-            Pitaya
+            
         </span>
 
         <span class="detPrecoProd">
-            R$ 16 / unidade
+            
         </span>
 
-        <span class="detDescProd">A pitaya tem sua origem na América Latina, é o fruto de um cacto e é considerada uma
-            fruta tropical.
-            Essa fruta protege as células com seu poder antioxidande, ajuda na digestão, na pressão e combate a anemia
-            porque é rica em vitaminas e minerais.
+        <span class="detDescProd">
         </span>
 
         <div class="detQtdBtn">
-            <span><i class="fa-light fa-plus"></i></span>
+            <span><i class="fa-light fa-plus" onclick="addQtd()"></i></span>
             <span id="detNumQtd">0</span>
-            <span><i class="fa-light fa-minus"></i></span>
+            <span><i class="fa-light fa-minus" onclick="lessQtd()"></i></span>
         </div>
 
         <div class="addBtnCont">
-            <button type="button">Adicionar</button>
-            <i class="fa-light fa-heart"></i>
+            <button type="button" onclick="addLocalStorage()" >Adicionar</button>
+            <i id="itemLike" class="fa-light fa-heart" onclick="itemLike(this, 0)"></i>
+            <i class="fa-solid fa-heart" style="display: none;" onclick="itemLike(this, 1)"></i>
         </div>
 
     </main>
