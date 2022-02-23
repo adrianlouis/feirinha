@@ -25,19 +25,15 @@ async function getCart() {
         let valorBRL = item.produto.valor.toFixed(2)
 
         template = ` <div class="cardCartItem">
-
         <img src="https://white-hill-0b791be10.1.azurestaticapps.net/img/${idImagem}${extensao}">
-
         <div class="cardEscritas">
-
             <span>${item.produto.titulo}</span>
             <span class="cartPriceItem">R$ ${valorBRL}</span>
             <div class="detQtdBtn">
-                <span onclick="addQtd(this, ${valorBRL})"><i class="fa-light fa-plus" ></i></span>
-                <span id="detNumQtd">${itemQuantidade}</span>
-                <span onclick="lessQtd(this, ${valorBRL})"><i class="fa-light fa-minus"></i></span>
+            <span onclick="lessQtd(this, ${valorBRL})"><i class="fa-light fa-circle-minus"></i></span>
+            <span id="detNumQtd">${itemQuantidade}</span>
+            <span  onclick="addQtd(this, ${valorBRL})">  <i class="fa-light fa-circle-plus"></i></span>
             </div>
-
         </div>
     </div>`
         container.innerHTML += template
@@ -45,25 +41,25 @@ async function getCart() {
 }
 
 function addQtd(el, price) {
-    let qtd = el.nextElementSibling.innerHTML
+    let qtd = el.previousElementSibling.innerHTML
     qtd = parseInt(qtd)
     qtd++
     precoFinalTotal += price
     document.querySelector('.cartTotalPrice').innerHTML = "Total: " + precoFinalTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-    el.nextElementSibling.innerHTML = qtd
+    el.previousElementSibling.innerHTML = qtd
     let total = parseFloat(qtd) * price
     total = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     el.parentNode.previousElementSibling.innerHTML = total
 }
 function lessQtd(el, price) {
-    let qtd = el.previousElementSibling.innerHTML
+    let qtd = el.nextElementSibling.innerHTML
     qtd = parseInt(qtd)
 
     if (qtd == 0) {
         return
     } else {
         qtd--
-        el.previousElementSibling.innerHTML = qtd
+        el.nextElementSibling.innerHTML = qtd
         let total = parseFloat(qtd) * price
         total = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
         el.parentNode.previousElementSibling.innerHTML = total

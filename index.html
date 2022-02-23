@@ -15,7 +15,7 @@
     <header>
 
         <div class="headerMenu">
-            <i class="fa-light fa-bars" onclick="indexMenu()"></i>
+            <i class="fa-light fa-bars" onclick="Menu()"></i>
         </div>
 
         <div class="headerIcons">
@@ -35,8 +35,8 @@
     </header>
 
     <main>
-        <div class="menuModal" onmouseleave="indexMenuClose()">
-            <i class="fa-regular fa-xmark" onclick="indexMenuClose()"></i>
+        <div class="menuModal" onmouseleave="MenuClose()">
+            <i class="fa-regular fa-xmark" onclick="MenuClose()"></i>
 
             <ul>
                 <li>Meu perfil</li>
@@ -47,11 +47,14 @@
                 <li>Newsletter</li>
                 <li>Configurações</li>
             </ul>
-            <span onclick="indexMenuClose()">Sair</span>
+            <span onclick="MenuClose()">Sair</span>
         </div>
 
         <div class="season">
-            <span>Tá na época</span>
+            <div class="seasonText">
+                <span>Tá na época</span>
+
+            </div>
             <div class="containerEpoca">
                 <div class="containerInner">
 
@@ -65,7 +68,10 @@
         </div>
 
         <div class="categoria">
-            <span>Categorias</span>
+            <div class="categoriaText">
+                <span>Categorias</span>
+            </div>
+
             <div class="containerCategoria">
 
                 <!-- <a href="categoria.html">

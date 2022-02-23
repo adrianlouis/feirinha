@@ -1,4 +1,14 @@
 
+function Menu() {
+    document.querySelector('.headerMenu').style.opacity = 0;
+    document.querySelector('.menuModal').style.left = 0;
+}
+function MenuClose() {
+    document.querySelector('.headerMenu').style.opacity = 1;
+    document.querySelector('.menuModal').style.left = '-101vh';
+}
+
+
 async function season() {
     const response = await fetch('https://apiorganica.azurewebsites.net/produtos/tanaepoca')
     const jsonBody = await response.json()
@@ -24,10 +34,10 @@ function itemLike(el, toogle) {
     let tg = toogle
     if (tg == 0) {
         el.style.display = 'none'
-        el.nextElementSibling.style.display = 'block'
+        el.nextElementSibling.style.display = 'flex'
     } else {
         el.style.display = 'none'
-        el.previousElementSibling.style.display = 'block'
+        el.previousElementSibling.style.display = 'flex'
     }
 }
 
