@@ -120,3 +120,7 @@ img{
 .catPreco{
     color: rgba(157, 151, 162, 1);
 }
+a{
+    color: #000;
+    text-decoration: none;
+}

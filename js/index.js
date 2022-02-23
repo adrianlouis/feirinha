@@ -18,7 +18,7 @@ const requisicao = fetch('https://apiorganica.azurewebsites.net/categorias').the
     template = ''
     for (i = 0; i < jsonBody.length; i++) {
         template = `
-        <div class="cardCategoria">
+        <a href="categoria.html?id=${jsonBody[i].ordem}&title=${jsonBody[i].titulo}"<div class="cardCategoria">
                         ${jsonBody[i].icone}
                         <span class="contCatSpan">${jsonBody[i].titulo}</span>
                     </div>`
